@@ -1,0 +1,11 @@
+demo\ml_math_func.o: ..\DMP\mllite\ml_math_func.c
+demo\ml_math_func.o: ..\DMP\driver\include\mlmath.h
+demo\ml_math_func.o: E:\keil\ARM\ARMCC\Bin\..\include\math.h
+demo\ml_math_func.o: ..\DMP\mllite\ml_math_func.h
+demo\ml_math_func.o: ..\DMP\driver\include\mltypes.h
+demo\ml_math_func.o: ..\DMP\driver\include\stdint_invensense.h
+demo\ml_math_func.o: E:\keil\ARM\ARMCC\Bin\..\include\stdint.h
+demo\ml_math_func.o: E:\keil\ARM\ARMCC\Bin\..\include\string.h
+demo\ml_math_func.o: E:\keil\ARM\ARMCC\Bin\..\include\errno.h
+demo\ml_math_func.o: E:\keil\ARM\ARMCC\Bin\..\include\limits.h
+demo\ml_math_func.o: ..\DMP\driver\include\mlinclude.h

@@ -1,0 +1,17 @@
+demo\mpl.o: ..\DMP\mllite\mpl.c
+demo\mpl.o: ..\DMP\mllite\storage_manager.h
+demo\mpl.o: ..\DMP\driver\include\mltypes.h
+demo\mpl.o: ..\DMP\driver\include\stdint_invensense.h
+demo\mpl.o: E:\keil\ARM\ARMCC\Bin\..\include\stdint.h
+demo\mpl.o: E:\keil\ARM\ARMCC\Bin\..\include\string.h
+demo\mpl.o: E:\keil\ARM\ARMCC\Bin\..\include\errno.h
+demo\mpl.o: E:\keil\ARM\ARMCC\Bin\..\include\limits.h
+demo\mpl.o: E:\keil\ARM\ARMCC\Bin\..\include\stdio.h
+demo\mpl.o: ..\DMP\driver\include\log.h
+demo\mpl.o: E:\keil\ARM\ARMCC\Bin\..\include\stdlib.h
+demo\mpl.o: E:\keil\ARM\ARMCC\Bin\..\include\stdarg.h
+demo\mpl.o: ..\DMP\mllite\mpl.h
+demo\mpl.o: ..\DMP\mllite\start_manager.h
+demo\mpl.o: ..\DMP\mllite\data_builder.h
+demo\mpl.o: ..\DMP\mllite\results_holder.h
+demo\mpl.o: ..\DMP\driver\include\mlinclude.h

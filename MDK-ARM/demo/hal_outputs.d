@@ -1,0 +1,17 @@
+demo\hal_outputs.o: ..\DMP\mllite\hal_outputs.c
+demo\hal_outputs.o: E:\keil\ARM\ARMCC\Bin\..\include\string.h
+demo\hal_outputs.o: ..\DMP\mllite\hal_outputs.h
+demo\hal_outputs.o: ..\DMP\driver\include\mltypes.h
+demo\hal_outputs.o: ..\DMP\driver\include\stdint_invensense.h
+demo\hal_outputs.o: E:\keil\ARM\ARMCC\Bin\..\include\stdint.h
+demo\hal_outputs.o: E:\keil\ARM\ARMCC\Bin\..\include\errno.h
+demo\hal_outputs.o: E:\keil\ARM\ARMCC\Bin\..\include\limits.h
+demo\hal_outputs.o: ..\DMP\driver\include\log.h
+demo\hal_outputs.o: E:\keil\ARM\ARMCC\Bin\..\include\stdlib.h
+demo\hal_outputs.o: E:\keil\ARM\ARMCC\Bin\..\include\stdarg.h
+demo\hal_outputs.o: ..\DMP\mllite\ml_math_func.h
+demo\hal_outputs.o: ..\DMP\driver\include\mlmath.h
+demo\hal_outputs.o: E:\keil\ARM\ARMCC\Bin\..\include\math.h
+demo\hal_outputs.o: ..\DMP\mllite\start_manager.h
+demo\hal_outputs.o: ..\DMP\mllite\data_builder.h
+demo\hal_outputs.o: ..\DMP\mllite\results_holder.h

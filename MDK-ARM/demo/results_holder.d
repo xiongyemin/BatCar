@@ -1,0 +1,17 @@
+demo\results_holder.o: ..\DMP\mllite\results_holder.c
+demo\results_holder.o: E:\keil\ARM\ARMCC\Bin\..\include\string.h
+demo\results_holder.o: ..\DMP\mllite\results_holder.h
+demo\results_holder.o: ..\DMP\driver\include\mltypes.h
+demo\results_holder.o: ..\DMP\driver\include\stdint_invensense.h
+demo\results_holder.o: E:\keil\ARM\ARMCC\Bin\..\include\stdint.h
+demo\results_holder.o: E:\keil\ARM\ARMCC\Bin\..\include\errno.h
+demo\results_holder.o: E:\keil\ARM\ARMCC\Bin\..\include\limits.h
+demo\results_holder.o: ..\DMP\mllite\ml_math_func.h
+demo\results_holder.o: ..\DMP\driver\include\mlmath.h
+demo\results_holder.o: E:\keil\ARM\ARMCC\Bin\..\include\math.h
+demo\results_holder.o: ..\DMP\mllite\start_manager.h
+demo\results_holder.o: ..\DMP\mllite\data_builder.h
+demo\results_holder.o: ..\DMP\mllite\message_layer.h
+demo\results_holder.o: ..\DMP\driver\include\log.h
+demo\results_holder.o: E:\keil\ARM\ARMCC\Bin\..\include\stdlib.h
+demo\results_holder.o: E:\keil\ARM\ARMCC\Bin\..\include\stdarg.h

@@ -1,0 +1,11 @@
+demo\start_manager.o: ..\DMP\mllite\start_manager.c
+demo\start_manager.o: E:\keil\ARM\ARMCC\Bin\..\include\string.h
+demo\start_manager.o: ..\DMP\driver\include\log.h
+demo\start_manager.o: E:\keil\ARM\ARMCC\Bin\..\include\stdlib.h
+demo\start_manager.o: E:\keil\ARM\ARMCC\Bin\..\include\stdarg.h
+demo\start_manager.o: ..\DMP\mllite\start_manager.h
+demo\start_manager.o: ..\DMP\driver\include\mltypes.h
+demo\start_manager.o: ..\DMP\driver\include\stdint_invensense.h
+demo\start_manager.o: E:\keil\ARM\ARMCC\Bin\..\include\stdint.h
+demo\start_manager.o: E:\keil\ARM\ARMCC\Bin\..\include\errno.h
+demo\start_manager.o: E:\keil\ARM\ARMCC\Bin\..\include\limits.h
