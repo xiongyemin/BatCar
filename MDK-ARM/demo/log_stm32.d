@@ -42,3 +42,5 @@ demo\log_stm32.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
 demo\log_stm32.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 demo\log_stm32.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 demo\log_stm32.o: ../Inc/usart.h
+demo\log_stm32.o: .\bsp\mytype.h
+demo\log_stm32.o: E:\keil\ARM\ARMCC\Bin\..\include\stdbool.h

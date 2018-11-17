@@ -17,6 +17,7 @@
 #define _PID_H
 
 #include "stdint.h"
+#include "mytype.h"
 typedef enum
 {
 
@@ -73,6 +74,10 @@ typedef struct _PID_TypeDef
 }PID_TypeDef;
 void all_pid_init();
 void pid_init(PID_TypeDef* pid);
+void pid_reset_chassis(u8 motornum,u32 kp, u32 ki, u32 kd);
+void pid_reset_all_chassis(u32 kp, u32 ki, u32 kd);
+void show_pid(u8 motornum);
+void show_all_pid(void);
 #endif
 
 //extern PID_TypeDef pid_pitch;    

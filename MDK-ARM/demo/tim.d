@@ -40,12 +40,12 @@ demo\tim.o: ../Inc/dma.h
 demo\tim.o: ../Inc/spi.h
 demo\tim.o: ../Inc/tim.h
 demo\tim.o: ../Inc/usart.h
-demo\tim.o: ../Inc/gpio.h
 demo\tim.o: .\bsp\mytype.h
 demo\tim.o: E:\keil\ARM\ARMCC\Bin\..\include\stdlib.h
 demo\tim.o: E:\keil\ARM\ARMCC\Bin\..\include\stdarg.h
 demo\tim.o: E:\keil\ARM\ARMCC\Bin\..\include\string.h
 demo\tim.o: E:\keil\ARM\ARMCC\Bin\..\include\stdbool.h
+demo\tim.o: ../Inc/gpio.h
 demo\tim.o: E:\keil\ARM\ARMCC\Bin\..\include\math.h
 demo\tim.o: .\bsp\bsp_can.h
 demo\tim.o: .\bsp\robomaster_common.h

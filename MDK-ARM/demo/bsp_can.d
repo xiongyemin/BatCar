@@ -41,12 +41,12 @@ demo\bsp_can.o: ../Inc/spi.h
 demo\bsp_can.o: ../Inc/tim.h
 demo\bsp_can.o: .\bsp\robomaster_common.h
 demo\bsp_can.o: ../Inc/usart.h
-demo\bsp_can.o: ../Inc/gpio.h
-demo\bsp_can.o: bsp\mytype.h
+demo\bsp_can.o: .\bsp\mytype.h
 demo\bsp_can.o: E:\keil\ARM\ARMCC\Bin\..\include\stdlib.h
 demo\bsp_can.o: E:\keil\ARM\ARMCC\Bin\..\include\stdarg.h
 demo\bsp_can.o: E:\keil\ARM\ARMCC\Bin\..\include\string.h
 demo\bsp_can.o: E:\keil\ARM\ARMCC\Bin\..\include\stdbool.h
+demo\bsp_can.o: ../Inc/gpio.h
 demo\bsp_can.o: E:\keil\ARM\ARMCC\Bin\..\include\math.h
 demo\bsp_can.o: bsp\bsp_can.h
 demo\bsp_can.o: bsp\pid.h

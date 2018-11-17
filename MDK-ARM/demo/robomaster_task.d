@@ -41,12 +41,12 @@ demo\robomaster_task.o: ../Inc/spi.h
 demo\robomaster_task.o: ../Inc/tim.h
 demo\robomaster_task.o: .\bsp\robomaster_common.h
 demo\robomaster_task.o: ../Inc/usart.h
-demo\robomaster_task.o: ../Inc/gpio.h
-demo\robomaster_task.o: bsp\mytype.h
+demo\robomaster_task.o: .\bsp\mytype.h
 demo\robomaster_task.o: E:\keil\ARM\ARMCC\Bin\..\include\stdlib.h
 demo\robomaster_task.o: E:\keil\ARM\ARMCC\Bin\..\include\stdarg.h
 demo\robomaster_task.o: E:\keil\ARM\ARMCC\Bin\..\include\string.h
 demo\robomaster_task.o: E:\keil\ARM\ARMCC\Bin\..\include\stdbool.h
+demo\robomaster_task.o: ../Inc/gpio.h
 demo\robomaster_task.o: E:\keil\ARM\ARMCC\Bin\..\include\math.h
 demo\robomaster_task.o: bsp\bsp_can.h
 demo\robomaster_task.o: bsp\pid.h

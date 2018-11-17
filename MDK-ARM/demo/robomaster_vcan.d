@@ -34,3 +34,8 @@ demo\robomaster_vcan.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
 demo\robomaster_vcan.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
 demo\robomaster_vcan.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 demo\robomaster_vcan.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
+demo\robomaster_vcan.o: .\bsp\mytype.h
+demo\robomaster_vcan.o: E:\keil\ARM\ARMCC\Bin\..\include\stdlib.h
+demo\robomaster_vcan.o: E:\keil\ARM\ARMCC\Bin\..\include\stdarg.h
+demo\robomaster_vcan.o: E:\keil\ARM\ARMCC\Bin\..\include\string.h
+demo\robomaster_vcan.o: E:\keil\ARM\ARMCC\Bin\..\include\stdbool.h

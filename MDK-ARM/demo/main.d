@@ -40,12 +40,12 @@ demo\main.o: .\bsp\robomaster_common.h
 demo\main.o: ../Inc/stm32f4xx_it.h
 demo\main.o: ../Inc/tim.h
 demo\main.o: ../Inc/usart.h
-demo\main.o: ../Inc/gpio.h
 demo\main.o: .\bsp\mytype.h
 demo\main.o: E:\keil\ARM\ARMCC\Bin\..\include\stdlib.h
 demo\main.o: E:\keil\ARM\ARMCC\Bin\..\include\stdarg.h
 demo\main.o: E:\keil\ARM\ARMCC\Bin\..\include\string.h
 demo\main.o: E:\keil\ARM\ARMCC\Bin\..\include\stdbool.h
+demo\main.o: ../Inc/gpio.h
 demo\main.o: E:\keil\ARM\ARMCC\Bin\..\include\math.h
 demo\main.o: .\bsp\bsp_can.h
 demo\main.o: .\bsp\robomaster_common.h
@@ -61,3 +61,5 @@ demo\main.o: .\bsp\robomaster_task.h
 demo\main.o: ..\MPU9250\mpu9250.h
 demo\main.o: ..\DMP\driver\eMPL\inv_mpu.h
 demo\main.o: ..\SYSTEM\delay\delay.h
+demo\main.o: ..\SYSTEM\USMART\usmart.h
+demo\main.o: ..\SYSTEM\USMART\usmart_str.h

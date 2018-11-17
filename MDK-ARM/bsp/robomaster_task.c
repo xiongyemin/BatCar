@@ -28,5 +28,5 @@ void task()
 	imu_attitude_update();//结算imu的pitch,roll,yaw角度
 	chassis_control();		//底盘电机的控制
 	shoot_control();			//摩擦轮以及拨弹电机的控制
-	mpu_dmp_get_data(&mypitch,&myroll,&myyaw);
+	mpu_dmp_get_data(&mypitch,&myroll,&myyaw);//dmp获取欧拉角
 }

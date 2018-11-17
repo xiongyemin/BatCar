@@ -34,3 +34,8 @@ demo\remote_control.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
 demo\remote_control.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 demo\remote_control.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 demo\remote_control.o: .\bsp\pid.h
+demo\remote_control.o: .\bsp\mytype.h
+demo\remote_control.o: E:\keil\ARM\ARMCC\Bin\..\include\stdlib.h
+demo\remote_control.o: E:\keil\ARM\ARMCC\Bin\..\include\stdarg.h
+demo\remote_control.o: E:\keil\ARM\ARMCC\Bin\..\include\string.h
+demo\remote_control.o: E:\keil\ARM\ARMCC\Bin\..\include\stdbool.h

@@ -41,12 +41,12 @@ demo\bsp_imu.o: ../Inc/spi.h
 demo\bsp_imu.o: ../Inc/tim.h
 demo\bsp_imu.o: .\bsp\robomaster_common.h
 demo\bsp_imu.o: ../Inc/usart.h
-demo\bsp_imu.o: ../Inc/gpio.h
-demo\bsp_imu.o: bsp\mytype.h
+demo\bsp_imu.o: .\bsp\mytype.h
 demo\bsp_imu.o: E:\keil\ARM\ARMCC\Bin\..\include\stdlib.h
 demo\bsp_imu.o: E:\keil\ARM\ARMCC\Bin\..\include\stdarg.h
 demo\bsp_imu.o: E:\keil\ARM\ARMCC\Bin\..\include\string.h
 demo\bsp_imu.o: E:\keil\ARM\ARMCC\Bin\..\include\stdbool.h
+demo\bsp_imu.o: ../Inc/gpio.h
 demo\bsp_imu.o: bsp\bsp_can.h
 demo\bsp_imu.o: bsp\pid.h
 demo\bsp_imu.o: bsp\myiic.h

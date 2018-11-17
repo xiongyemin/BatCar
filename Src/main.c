@@ -22,6 +22,7 @@
 #include "mpu9250.h"
 #include "inv_mpu.h"
 #include "delay.h"
+#include "usmart.h"
 /* USER CODE BEGIN Includes */
 #include "robomaster_common.h"
 /* USER CODE END Includes */
@@ -87,12 +88,12 @@ int main(void)
   MX_SPI5_Init();//用于imu驱动
   MX_TIM2_Init();//中断控制程序  主要程序在TIM2中运行
   MX_TIM3_Init();//未用
-  MX_TIM4_Init();//未用
+//  MX_TIM4_Init();//USMART占用
   MX_USART2_UART_Init();//蓝牙串口  未用
   MX_USART3_UART_Init();//大疆SDK串口 未用
-  delay_init(168);
-  testx=mpu_dmp_init();
-  testx+=100;
+  delay_init(168);//延时函数初始化
+  mpu_dmp_init();//DMP初始化
+  usmart_dev.init(84);//USMART初始化
   /* USER CODE BEGIN 2 */
 	/**TIM5 GPIO Configuration    
 	PI0     ------> TIM5_CH4
@@ -126,7 +127,7 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  	
+  	uint8_t buf[]="asd";
   while (1)
   {	
 		
@@ -140,20 +141,13 @@ int main(void)
 	  wave_form_data[3] =moto_chassis[6].angle;
 	  wave_form_data[4] =moto_chassis[6].total_angle;//moto_chassis[0].real_current;
 	  wave_form_data[5] =moto_chassis[6].real_current;//moto_chassis[0].hall;
-	*/
-
-	  wave_form_data[0] =myyaw;
-	  wave_form_data[1] =mypitch;
-	  wave_form_data[2] =myroll;
-	  wave_form_data[3] =testx;
-//	  wave_form_data[4] =testmpu;
-	  
-//	  wave_form_data[0] =(short)imu.yaw;
-//	  wave_form_data[1] =(short)imu.pit;
-//	  wave_form_data[2] =(short)imu.rol;
-//	  wave_form_data[3] =(short)imu.ax;
-//	  wave_form_data[4] =(short)imu.ay;
-//	  wave_form_data[5] =(short)imu.az;
+	*/  
+	  wave_form_data[0] =(short)imu.yaw;
+	  wave_form_data[1] =(short)imu.pit;
+	  wave_form_data[2] =(short)imu.rol;
+	  wave_form_data[3] =(short)imu.ax;
+	  wave_form_data[4] =(short)imu.ay;
+	  wave_form_data[5] =(short)imu.az;
 		shanwai_send_wave_form();   //将数据传输到三外上位机，可以看到实时波形
   }
   /* USER CODE END 3 */

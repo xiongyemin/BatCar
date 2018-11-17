@@ -14,7 +14,8 @@
 /* Includes ------------------------------------------------------------------*/
 #include "pid.h"
 #include "stm32f4xx.h"
-
+#include <main.h>
+#include "usart.h"
 #define ABS(x)		((x>0)? x: -x) 
 
 PID_TypeDef pid_pitch,pid_pithch_speed,pid_roll,pid_roll_speed,pid_yaw_speed;
@@ -51,6 +52,32 @@ static void pid_param_init(
 	pid->output = 0;
 }
 
+/*中途更改底盘参数设定--------------------------------------------------------------*/
+void pid_reset_chassis(u8 motornum,u32 kp, u32 ki, u32 kd)
+{
+	//main函数里面定义了7个pid结构
+	if(motornum<7){
+		motor_pid[motornum].kp = (float)kp/1000.0;
+		motor_pid[motornum].ki = (float)ki/1000.0;
+		motor_pid[motornum].kd = (float)kd/1000.0;
+	}
+}
+void pid_reset_all_chassis(u32 kp, u32 ki, u32 kd)
+{
+	//main函数里面定义了7个pid结构
+		for(unsigned int i=0;i<4;++i)
+		{
+			pid_reset_chassis(i,kp,ki,kd);
+		}
+}
+void show_pid(u8 motornum){
+	printf("\r\n number %d motornum kp is %.4f , ki is %.4f, kd is %.4f",motornum,motor_pid[motornum].kp,motor_pid[motornum].ki,motor_pid[motornum].kd);
+}
+void show_all_pid(void){
+	for(unsigned short i=0;i<4;++i){
+		show_pid(i);
+	}
+}
 /*中途更改参数设定--------------------------------------------------------------*/
 static void pid_reset(PID_TypeDef * pid, float kp, float ki, float kd)
 {

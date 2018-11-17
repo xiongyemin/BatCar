@@ -9,21 +9,56 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "usart.h"
-
+#include "mytype.h"
 #include "gpio.h"
 #include "dma.h"
+#include "delay.h"
 
 /* USER CODE BEGIN 0 */
 
 #include "Remote_Control.h"
 
 uint8_t UART_Buffer[100];
+#if 1
+#pragma import(__use_no_semihosting)             
+//标准库需要的支持函数                 
+struct __FILE 
+{ 
+	int handle; 
+}; 
+
+FILE __stdout;       
+//定义_sys_exit()以避免使用半主机模式    
+void _sys_exit(int x) 
+{ 
+	x = x; 
+} 
+//重定义fputc函数 
+int fputc(int ch, FILE *f)
+{ 	
+	while((USART2->SR&0X40)==0);//循环发送,直到发送完毕   
+	USART2->DR = (u8) ch;      
+	return ch;
+}
+#endif 
+#if EN_USART2_RX   //如果使能了接收
+//串口2中断服务程序
+//注意,读取USARTx->SR能避免莫名其妙的错误   	
+u8 USART_RX_BUF[USART_REC_LEN];     //接收缓冲,最大USART_REC_LEN个字节.
+//接收状态
+//bit15，	接收完成标志
+//bit14，	接收到0x0d
+//bit13~0，	接收到的有效字节数目
+u16 USART_RX_STA=0;       //接收状态标记	
+
+#endif
 /* USER CODE END 0 */
 
 UART_HandleTypeDef huart1;
 UART_HandleTypeDef huart2;
 UART_HandleTypeDef huart3;
 UART_HandleTypeDef huart6;
+UART_HandleTypeDef huart7;
 DMA_HandleTypeDef hdma_usart1_rx;
 
 /* USART1 init function */
@@ -172,7 +207,12 @@ void HAL_UART_MspInit(UART_HandleTypeDef* uartHandle)
     HAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
 
   /* USER CODE BEGIN USART2_MspInit 1 */
-
+		__HAL_UART_DISABLE_IT(&huart2,UART_IT_TC);
+#if EN_USART2_RX
+		__HAL_UART_ENABLE_IT(&huart2,UART_IT_RXNE);		//开启接收中断
+		HAL_NVIC_EnableIRQ(USART2_IRQn);				//使能USART2中断通道
+		HAL_NVIC_SetPriority(USART2_IRQn,0,0);			//抢占优先级0，子优先级0
+#endif	
   /* USER CODE END USART2_MspInit 1 */
   }
   else if(uartHandle->Instance==USART3)
@@ -195,7 +235,6 @@ void HAL_UART_MspInit(UART_HandleTypeDef* uartHandle)
     HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
   /* USER CODE BEGIN USART3_MspInit 1 */
-
   /* USER CODE END USART3_MspInit 1 */
   }
   else if(uartHandle->Instance==USART6)

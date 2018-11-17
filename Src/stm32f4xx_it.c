@@ -36,6 +36,7 @@
 #include "stm32f4xx_it.h"
 
 /* USER CODE BEGIN 0 */
+#include "usart.h"
 #include "robomaster_common.h"
 /* USER CODE END 0 */
 
@@ -45,7 +46,10 @@ extern DMA_HandleTypeDef hdma_tim1_ch1_ch2_ch3;
 extern TIM_HandleTypeDef htim2;
 extern DMA_HandleTypeDef hdma_usart1_rx;
 extern UART_HandleTypeDef huart1;
+extern UART_HandleTypeDef huart3;
 extern UART_HandleTypeDef huart6;
+extern u8  USART_RX_BUF[USART_REC_LEN]; //接收缓冲,最大USART_REC_LEN个字节.末字节为换行符 
+extern u16 USART_RX_STA;         		//接收状态标记	
 
 extern TIM_HandleTypeDef htim6;
 
@@ -314,7 +318,39 @@ void USART6_IRQHandler(void)
 
   /* USER CODE END USART6_IRQn 1 */
 }
+/**
+* @brief This function handles USART3 global interrupt.
+*/
+#if EN_USART2_RX   //如果使能了接收
+void USART2_IRQHandler(void)                	
+{ 
+	u8 Res;
 
+	if((__HAL_UART_GET_FLAG(&huart2,UART_FLAG_RXNE)!=RESET))  //接收中断(接收到的数据必须是0x0d 0x0a结尾)
+	{
+        HAL_UART_Receive(&huart2,&Res,1,1000); 
+		if((USART_RX_STA&0x8000)==0)//接收未完成
+		{
+			if(USART_RX_STA&0x4000)//接收到了0x0d
+			{
+				if(Res!=0x0a)USART_RX_STA=0;//接收错误,重新开始
+				else USART_RX_STA|=0x8000;	//接收完成了 
+			}
+			else //还没收到0X0D
+			{	
+				if(Res==0x0d)USART_RX_STA|=0x4000;
+				else
+				{
+					USART_RX_BUF[USART_RX_STA&0X3FFF]=Res ;
+					USART_RX_STA++;
+					if(USART_RX_STA>(USART_REC_LEN-1))USART_RX_STA=0;//接收数据错误,重新开始接收	  
+				}		 
+			}
+		}   		 
+	}
+	HAL_UART_IRQHandler(&huart2);	
+} 
+#endif	
 /* USER CODE BEGIN 1 */
 
 /* USER CODE END 1 */

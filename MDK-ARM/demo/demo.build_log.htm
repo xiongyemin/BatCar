@@ -22,20 +22,28 @@ Dialog DLL:      TCM.DLL V1.14.14.0
  
 <h2>Project:</h2>
 C:\Users\Administrator\Desktop\matlab\µ×ÅÌÇý¶¯³ÌÐòV1.0\³ÌÐòÔ´Âë\MDK-ARM\demo.uvprojx
-Project File Date:  10/22/2018
+Project File Date:  11/16/2018
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 3 (build 300)', folder: 'E:\keil\ARM\ARMCC\Bin'
 Build target 'demo'
 compiling main.c...
-.\bsp\pid.h(74): warning:  #1295-D: Deprecated declaration all_pid_init - give arg types
+.\bsp\pid.h(75): warning:  #1295-D: Deprecated declaration all_pid_init - give arg types
   void all_pid_init();
 ..\MPU9250\mpu9250.h(19): warning:  #47-D: incompatible redefinition of macro "MPU6500_ID" (declared at line 110 of ".\bsp\mpu6500_reg.h")
   #define MPU6500_ID				0X71  	//MPU6500???÷¼?ID
-../Src/main.c: 2 warnings, 0 errors
+../Src/main.c(130): warning:  #177-D: variable "buf" was declared but never referenced
+    	uint8_t buf[]="asd";
+../Src/main.c: 3 warnings, 0 errors
+compiling robomaster_task.c...
+bsp\pid.h(75): warning:  #1295-D: Deprecated declaration all_pid_init - give arg types
+  void all_pid_init();
+..\MPU9250\mpu9250.h(19): warning:  #47-D: incompatible redefinition of macro "MPU6500_ID" (declared at line 110 of "bsp\mpu6500_reg.h")
+  #define MPU6500_ID				0X71  	//MPU6500???÷¼?ID
+bsp\robomaster_task.c: 2 warnings, 0 errors
 linking...
-Program Size: Code=65936 RO-data=4424 RW-data=268 ZI-data=9052  
-"demo\demo.axf" - 0 Error(s), 2 Warning(s).
+Program Size: Code=70848 RO-data=4736 RW-data=648 ZI-data=9312  
+"demo\demo.axf" - 0 Error(s), 5 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -53,7 +61,7 @@ Package Vendor: ARM
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE:4.3.0
-Build Time Elapsed:  00:00:05
+Build Time Elapsed:  00:00:15
 </pre>
 </body>
 </html>

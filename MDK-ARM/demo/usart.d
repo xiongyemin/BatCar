@@ -33,6 +33,12 @@ demo\usart.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
 demo\usart.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
 demo\usart.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 demo\usart.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
+demo\usart.o: .\bsp\mytype.h
+demo\usart.o: E:\keil\ARM\ARMCC\Bin\..\include\stdlib.h
+demo\usart.o: E:\keil\ARM\ARMCC\Bin\..\include\stdarg.h
+demo\usart.o: E:\keil\ARM\ARMCC\Bin\..\include\string.h
+demo\usart.o: E:\keil\ARM\ARMCC\Bin\..\include\stdbool.h
 demo\usart.o: ../Inc/gpio.h
 demo\usart.o: ../Inc/dma.h
+demo\usart.o: ..\SYSTEM\delay\delay.h
 demo\usart.o: ../Inc/Remote_Control.h

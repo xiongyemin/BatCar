@@ -1,6 +1,12 @@
 demo\pid.o: bsp\pid.c
 demo\pid.o: bsp\pid.h
 demo\pid.o: E:\keil\ARM\ARMCC\Bin\..\include\stdint.h
+demo\pid.o: bsp\mytype.h
+demo\pid.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
+demo\pid.o: ../Inc/stm32f4xx_hal_conf.h
+demo\pid.o: ../Inc/main.h
+demo\pid.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h
+demo\pid.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
 demo\pid.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
 demo\pid.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f427xx.h
 demo\pid.o: ../Drivers/CMSIS/Include/core_cm4.h
@@ -10,11 +16,6 @@ demo\pid.o: ../Drivers/CMSIS/Include/core_cmFunc.h
 demo\pid.o: ../Drivers/CMSIS/Include/core_cmSimd.h
 demo\pid.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h
 demo\pid.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
-demo\pid.o: ../Inc/stm32f4xx_hal_conf.h
-demo\pid.o: ../Inc/main.h
-demo\pid.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h
-demo\pid.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
-demo\pid.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
 demo\pid.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
 demo\pid.o: E:\keil\ARM\ARMCC\Bin\..\include\stdio.h
 demo\pid.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h
@@ -33,3 +34,8 @@ demo\pid.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
 demo\pid.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
 demo\pid.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 demo\pid.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
+demo\pid.o: E:\keil\ARM\ARMCC\Bin\..\include\stdlib.h
+demo\pid.o: E:\keil\ARM\ARMCC\Bin\..\include\stdarg.h
+demo\pid.o: E:\keil\ARM\ARMCC\Bin\..\include\string.h
+demo\pid.o: E:\keil\ARM\ARMCC\Bin\..\include\stdbool.h
+demo\pid.o: ../Inc/usart.h
